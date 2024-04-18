@@ -1,18 +1,14 @@
 import numpy as np
 
+#100% works for sudoku puzzles with only 1 solution
 def sudoku_solver(sudoku):
     """
-    Solves a Sudoku puzzle and returns its unique solution.
-
     Input
-        sudoku : 9x9 numpy array
-            Empty cells are designated by 0.
+        sudoku : 9x9 numpy array - empty cells are designated by 0.
 
     Output
-        9x9 numpy array of integers
-            It contains the solution, if there is one. If there is no solution, all array entries should be -1.
+        9x9 numpy array of integers with solution, or array of -1s if no solution
     """
-    ### YOUR CODE HERE
     
     #checks input the board follows the rules of sudoku
     def check_input_board(board):
@@ -126,9 +122,6 @@ def sudoku_solver(sudoku):
         solved_sudoku = maybe_solved
     
     return solved_sudoku
-
-
-# YOUR CODE HERE
 
 hardtest = np.array(
 [[0, 2, 0, 0, 0, 6, 9, 0, 0],
